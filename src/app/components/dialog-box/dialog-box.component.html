@@ -1,0 +1,38 @@
+<div class="dialog_box_container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить название</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить цену (USD)</mat-label>
+      <input matInput formControlName="price">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить производителя</mat-label>
+      <input matInput formControlName="manufacturer">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить тип устройства</mat-label>
+      <input matInput formControlName="device_type">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить тип затяжки</mat-label>
+      <input matInput formControlName="puff_type">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить максимальную мощность (W)</mat-label>
+      <input matInput formControlName="maximum_power">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить емкость аккумулятора (mAh)</mat-label>
+      <input matInput formControlName="battery_capacity">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Добавить объем бака атомайзера (ml)</mat-label>
+      <input matInput formControlName="tank_capacity">
+    </mat-form-field>
+    <button mat-button type="submit">{{isNew ? 'Добавить товар' :  'Обновить'}}</button>
+    <button mat-button (click)="onNoClick()" type="button">Отмена</button>
+  </form>
+</div>
